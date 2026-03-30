@@ -1,9 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
 <head>
   <meta charset="utf-8">
-  <title id= "typewriter">Creole Creations</title>
+  <title>Creole Creations</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -12,81 +11,67 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel+Decorative:wght@400;700&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/d0041be44b.js" crossorigin="anonymous"></script>
 </head>
+<body>
 
-<body> 
-  <!--- Site Header --->
+  <!-- SITE HEADER -->
   <header class="site-header">
-
-    <!--- Navigation Containter-->
     <div class="nav-container">
+
+      <!-- Hamburger: spans live here, NO fa-bars icon -->
+      <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="logo">Creole Creations</div>
+
+      <div class="cart-icon">
+        <i class="fa-solid fa-shopping-bag"></i>
+      </div>
+
     </div>
+  </header>
 
-   <!--- Hamburger Menu Icon --->
-    <div class="hamburger" id="hamburger" aira-label="Open Menu" role="button" rabindex="0">
-      <span></span>
-      <span></span>
-      <span></span>
-      <i class="fa-solid fa-bars"></i>
-    </div>
-   <!--- Creole Creations Logo --->
-    <div class="logo">
-      Creole Creations
-    </div>
-
-   <!--- Cart Icon --->
-    <div class="cart-icon">
-      <i class="fa-solid fa-shopping-bag"></i>
-    </div>
-
-  </div>
-  <!--- Mobile Menu --->
-  <nav class="mobile-menu" id="mobileMenu">
-   <div class="menu-header">
-    <div class="menu-logo">Creole Creations</div>
-    <div class="menu-tagline">Luxury Beauty · Cosmic Glow</div>
-   </div>
-
-  <div class="menu-nav">
-    <a href="About.html"><span class="link-num">01</span> About</a>
-    <a href="Products.html"><span class="link-num">02</span> Products</a>
-    <a href="Booking.html"><span class="link-num">03</span> Booking</a>
-    <a href="Contact.html"><span class="link-num">04</span> Contact</a>
-  </div>
-
-  <div class="menu-footer">
-    <div class="menu-socials">
-      <a href="#">IG</a><a href="#">TK</a><a href="#">PT</a>
-    </div>
-  </div>
-  </nav>
-
-  <!--- Visual Overlay --->
+  <!-- OVERLAY -->
   <div class="overlay" id="overlay"></div>
 
-   <main>
-    <!--- Hero -->
-     <section class = "hero">
+  <!-- MOBILE MENU -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Site navigation">
+    <div class="menu-header">
+      <div class="menu-logo">Creole Creations</div>
+      <div class="menu-tagline">Luxury Beauty · Cosmic Glow</div>
+    </div>
+    <div class="menu-nav">
+      <a href="About.html"><span class="link-num">01</span> About</a>
+      <a href="Products.html"><span class="link-num">02</span> Products</a>
+      <a href="Booking.html"><span class="link-num">03</span> Booking</a>
+      <a href="Contact.html"><span class="link-num">04</span> Contact</a>
+    </div>
+    <div class="menu-footer">
+      <div class="menu-socials">
+        <a href="#">IG</a>
+        <a href="#">TK</a>
+        <a href="#">PT</a>
+      </div>
+    </div>
+  </nav>
 
-        <!--- Hero Overlay --->
-        <div class = "hero-overlay">
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="hero">
+      <div class="hero-overlay">
         <h1>Luxury Beauty, Beaming Confidence</h1>
-        <p>Eleveate your Glow with Creole Creations.</p>
-        <a href="Products.html" class= "btn-primary">Shop Now</a>
-        </div>
-
-      </section>
-
-    <section class = "featured">
-        
+        <p>Elevate your Glow with Creole Creations.</p>
+        <a href="Products.html" class="btn-primary">Shop Now</a>
+      </div>
     </section>
-
-    <section class = "gallery">
-        
-    </section>
-
-   </main>
+    <section class="featured"></section>
+    <section class="gallery"></section>
+  </main>
 
   <footer class="site-footer">Created by Noah Jones</footer>
-<script src="js/main.js"></script>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
