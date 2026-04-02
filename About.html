@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About – Creole Creations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel+Decorative:wght@400;700&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d0041be44b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ 
+  <!-- ═══ SITE HEADER ══════════════════════════════════ -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo">Creole Creations</div>
+      <div class="cart-icon">
+        <i class="fa-solid fa-shopping-bag"></i>
+      </div>
+    </div>
+  </header>
+ 
+  <!-- ═══ OVERLAY ══════════════════════════════════════ -->
+  <div class="overlay" id="overlay"></div>
+ 
+  <!-- ═══ MOBILE MENU ══════════════════════════════════ -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Site navigation">
+    <div class="menu-header">
+      <div class="menu-logo">Creole Creations</div>
+      <div class="menu-tagline">Luxury Beauty · Cosmic Glow</div>
+    </div>
+    <div class="menu-nav">
+      <a href="Contact.html"><span class="link-num">01</span> Contact</a>
+      <a href="Products.html"><span class="link-num">02</span> Products</a>
+      <a href="Booking.html"><span class="link-num">03</span> Booking</a>
+      <a href="Homepage.html"><span class="link-num">04</span> Home</a>
+    </div>
+    <div class="menu-footer">
+      <div class="menu-socials">
+        <a href="#">IG</a>
+        <a href="#">TK</a>
+        <a href="#">PT</a>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- ═══ PAGE CONTENT ══════════════════════════════════ -->
+  <main>
+ 
+    <!-- Page hero -->
+    <section class="page-hero">
+      <p class="page-hero__eyebrow">Our Story</p>
+      <h1 class="page-hero__title">About Us</h1>
+      <p class="page-hero__sub">Your story about Creole Creations goes here.</p>
+    </section>
+ 
+    <!-- ── Carousel ───────────────────────────────────── -->
+    <section class="carousel-section">
+      <div class="carousel">
+ 
+        <div class="carousel__track-wrap">
+          <div class="carousel__track" id="carouselTrack">
+ 
+            <!-- Slide 1 — replace background with your real image -->
+            <div class="carousel__slide">
+              <div class="carousel__img carousel__img--1"></div>
+            </div>
+ 
+            <!-- Slide 2 -->
+            <div class="carousel__slide">
+              <div class="carousel__img carousel__img--2"></div>
+            </div>
+ 
+            <!-- Slide 3 -->
+            <div class="carousel__slide">
+              <div class="carousel__img carousel__img--3"></div>
+            </div>
+ 
+          </div><!-- /track -->
+        </div><!-- /track-wrap -->
+ 
+        <!-- Prev / Next arrows -->
+        <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Previous">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+ 
+        <!-- Dot indicators -->
+        <div class="carousel__dots" id="carouselDots">
+          <button class="carousel__dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="carousel__dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="carousel__dot" data-index="2" aria-label="Slide 3"></button>
+        </div>
+ 
+      </div><!-- /carousel -->
+    </section>
+ 
+    <!-- ── About body — fill in your content ─────────── -->
+    <section class="about-body">
+ 
+      <div class="about-block">
+        <p class="about-block__label">Who We Are</p>
+        <h2 class="about-block__heading">Heading goes here</h2>
+        <p class="about-block__text">Your paragraph text goes here. Tell your brand story, your mission, or what makes Creole Creations unique.</p>
+      </div>
+ 
+      <div class="about-block">
+        <p class="about-block__label">Our Mission</p>
+        <h2 class="about-block__heading">Heading goes here</h2>
+        <p class="about-block__text">Your paragraph text goes here.</p>
+      </div>
+ 
+      <div class="about-block">
+        <p class="about-block__label">The Vision</p>
+        <h2 class="about-block__heading">Heading goes here</h2>
+        <p class="about-block__text">Your paragraph text goes here.</p>
+      </div>
+ 
+    </section>
+ 
+  </main>
+ 
+  <footer class="site-footer">Created by Noah Jones</footer>
+ 
+  <script src="js/main.js"></script>
+ 
+  <!-- Carousel logic -->
+  <script>
+    const track  = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel__slide');
+    const dots   = document.querySelectorAll('.carousel__dot');
+    let current  = 0;
+ 
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+ 
+    document.getElementById('carouselNext').addEventListener('click', () => goTo(current + 1));
+    document.getElementById('carouselPrev').addEventListener('click', () => goTo(current - 1));
+    dots.forEach(dot => dot.addEventListener('click', () => goTo(+dot.dataset.index)));
+ 
+    /* Auto-advance every 5 seconds */
+    setInterval(() => goTo(current + 1), 5000);
+  </script>
+ 
+</body>
+</html>
