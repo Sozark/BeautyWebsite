@@ -476,7 +476,6 @@ main {
     padding: 36px 0 24px;
 }
 
-/* FIX 6: removed the duplicate .mobile-menu a block that was overriding these styles */
 .mobile-menu a {
     display: flex;
     align-items: center;
@@ -701,7 +700,7 @@ main {
 .product-card:hover .product-card__image {
   transform: scale(1.04);
 }
- 
+/* Linear Gradient Placeholders for images */
 .product-card__image--1 { background: linear-gradient(135deg, #1a0025 0%, #3d0050 50%, #c9a84c22 100%); }
 .product-card__image--2 { background: linear-gradient(135deg, #1f0010 0%, #5c0030 50%, #E91E6322 100%); }
 .product-card__image--3 { background: linear-gradient(135deg, #00101a 0%, #003050 50%, #c9a84c22 100%); }
