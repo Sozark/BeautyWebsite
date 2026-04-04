@@ -49,3 +49,21 @@ document.addEventListener("click", (e) => {
     closeMenu();
   }
 });
+
+/* code that ensures that your contact form and boking form will work. */
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name    = document.getElementById('name').value;
+  const email   = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  window.location.href = `mailto:you@email.com?subject=Message from ${name}&body=${message}`;
+});
+
+/* Scroll reveal animation */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.featured, .gallery').forEach(el => observer.observe(el));
