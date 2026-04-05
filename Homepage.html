@@ -218,18 +218,32 @@
     </div>
   </section>
 
-  <!--- Editorial Banner — Full Width Image with CTA --->
-  <section class="banner reveal">
-    
-    <!--- Banner Background Image — currently using BlackWoman.jpeg as placeholder --->
-    <div class="banner__img"></div>
-    <div class="banner__content">
-      <p class="banner__label">Now Booking</p>
-      <h2 class="banner__heading">Your Glow<br><em>Awaits</em></h2>
-      <!--- Banner Call to Action --->
-      <a href="Booking.html" class="btn-primary">Book a Session</a>
-    </div>
-  </section>
+ <!--- Editorial Banner — Full Width Video with CTA --->
+<section class="banner reveal">
+
+  <!--- Background Video — replace src with your actual video file --->
+  <video
+    class="banner__video"
+    src="videos/StockFreeModelVideo2.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    poster="images/BlackWoman.jpeg"
+  ></video>
+
+  <!--- Dark Overlay so text stays readable over the video --->
+  <div class="banner__dim"></div>
+
+  <!--- Banner Text and Call to Action --->
+  <div class="banner__content">
+    <p class="banner__label">Now Booking</p>
+    <h2 class="banner__heading">Your Glow<br><em>Awaits</em></h2>
+    <!--- Banner Call to Action --->
+    <a href="Booking.html" class="btn-primary">Book a Session</a>
+  </div>
+
+</section>
 
   <!--- Values Row — Three Brand Pillars --->
   <section class="values reveal">
@@ -279,7 +293,7 @@
 </main>
 
 <!--- Site Footer --->
-<footer class="site-footer">Created by Noah Jones</footer>
+<footer class="site-footer">Created by Noah C. Jones</footer>
 
 <!--- Menu Toggle Script — handles open/close for all pages --->
 <script src="js/main.js"></script>

@@ -841,13 +841,23 @@ main {
     margin-bottom: 100px;
 }
 
-/* ----------- Banner Background Image ---------- */
-.banner__img {
+/* ----------- Banner Background Video ---------- */
+.banner__video {
     position: absolute;
     inset: 0;
-    background: url(../images/BlackWoman.jpeg) center / cover no-repeat;
-    transform: scale(1.04);
-    transition: transform 8s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* ----------- Dark Overlay Over Banner Video ---------- */
+.banner__dim {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
 }
 
 .banner:hover .banner__img { transform: scale(1.0); }
