@@ -1002,6 +1002,8 @@ main {
     aspect-ratio: 1;
     overflow: hidden;
     cursor: pointer;
+    background-size: cover;
+    background-position: center;
     transition: opacity 0.3s ease;
 }
 
@@ -1416,20 +1418,23 @@ main {
 .product-card__image {
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transition: transform 0.5s ease;
 }
 
 .product-card:hover .product-card__image { transform: scale(1.04); }
 
 /* ----------- Gradient Placeholders for Each Product ---------- */
-.product-card__image--1 { background: linear-gradient(135deg, #1a0025 0%, #3d0050 50%, #c9a84c22 100%); }
-.product-card__image--2 { background: linear-gradient(135deg, #1f0010 0%, #5c0030 50%, #E91E6322 100%); }
-.product-card__image--3 { background: linear-gradient(135deg, #00101a 0%, #003050 50%, #c9a84c22 100%); }
-.product-card__image--4 { background: linear-gradient(135deg, #0a1a00 0%, #1a4000 50%, #c9a84c22 100%); }
-.product-card__image--5 { background: linear-gradient(135deg, #1a1000 0%, #4a2800 50%, #c9a84c33 100%); }
-.product-card__image--6 { background: linear-gradient(135deg, #0d0020 0%, #280050 50%, #E91E6322 100%); }
-.product-card__image--7 { background: linear-gradient(135deg, #200010 0%, #600030 50%, #E91E6322 100%); }
-.product-card__image--8 { background: linear-gradient(135deg, #1a0a00 0%, #3d1800 50%, #c9a84c33 100%); }
+.product-card__image--1 { background: url(/images/MockupSerum.jpg) center / cover no-repeat; }
+.product-card__image--2 { background: url(/images/LipElixer.jpg) center / cover no-repeat; }
+.product-card__image--3 { background: url(/images/EyePallette.jpg) center / cover no-repeat; }
+.product-card__image--4 { background: url(/images/MistSpray.jpg) center / cover no-repeat; }
+.product-card__image--5 { background: url(/images/BodyOil.jpg) center / cover no-repeat; }
+.product-card__image--6 { background: url(/images/LashPhoto.jpg) center / cover no-repeat; }
+.product-card__image--7 { background: url(/images/LipGloss.jpg) center / cover no-repeat; }
+.product-card__image--8 { background: url(/images/SugarScrub.jpg) center / cover no-repeat; }
 
 /* ----------- Wishlist Heart Button ---------- */
 .product-card__wishlist {
@@ -1570,13 +1575,15 @@ main {
 /* ----------- Slide Images — replace with real photos ---------- */
 .carousel__img {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 20;               /* Maintains 16:9 ratio */
+    background-size: cover;             /* Ensures image covers area without distortion [1] */
+    background-position: center;        /* Centers the image [1] */
+    background-repeat: no-repeat;       /* Prevents tiling */
 }
 
-.carousel__img--1 { background: linear-gradient(135deg, #0e0118 0%, #2a0040 100%); }
-.carousel__img--2 { background: linear-gradient(135deg, #1a0008 0%, #4a0020 100%); }
-.carousel__img--3 { background: linear-gradient(135deg, #000d1a 0%, #002040 100%); }
-
+.carousel__img--1 { background: url(/images/Gideon-Hezekiah.jpg) center / cover no-repeat; }
+.carousel__img--2 { background: url(/images/OyeShotThis.jpg) center / cover no-repeat; }
+.carousel__img--3 { background: url(/images/JessicaFelicio.jpg) center / cover no-repeat; }
 /* ----------- Previous and Next Arrow Buttons ---------- */
 .carousel__btn {
     position: absolute;
