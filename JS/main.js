@@ -54,34 +54,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-/* ── Contact form handler ── */
-/* Wrapped in a check so it only runs on the Contact page */
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name    = document.getElementById("name").value;
-    const email   = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-    window.location.href = `mailto:you@email.com?subject=Message from ${name}&body=${message}`;
-  });
-}
-
-/* ── Booking form handler ── */
-/* Wrapped in a check so it only runs on the Booking page */
-const bookingForm = document.getElementById("bookingForm");
-if (bookingForm) {
-  bookingForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name    = document.getElementById("b-name").value;
-    const email   = document.getElementById("b-email").value;
-    const date    = document.getElementById("b-date").value;
-    const time    = document.getElementById("b-time").value;
-    const service = document.querySelector('input[name="service"]:checked')?.value || "Not selected";
-    window.location.href = `mailto:you@email.com?subject=Booking Request from ${name}&body=Name: ${name}%0AEmail: ${email}%0AService: ${service}%0ADate: ${date}%0ATime: ${time}`;
-  });
-}
-
 /* ── Scroll Reveal ── */
 /* threshold: 0 triggers as soon as any pixel enters the screen */
 /* rootMargin fires the reveal 80px before the element hits the bottom */
